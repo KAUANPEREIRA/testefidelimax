@@ -1,6 +1,6 @@
 "use client";
 import { useSendError } from "@/hooks/useSendErro";
-import { sendFakePost } from "@/hooks/useSendFakePost";
+import { useSendFakePost } from "@/hooks/useSendFakePost";
 import { useSendSucces } from "@/hooks/useSendSucces";
 import { Inputs } from "@/types/Inputs";
 import { Itens } from "@/types/Question";
@@ -48,7 +48,7 @@ export const Main = () => {
 
   const handleFormSubmit = (data: Inputs) => {
     if (buttonClicked === "sendFakePost") {
-      sendFakePost(data);
+      useSendFakePost(data);
     } else if (buttonClicked === "sendError") {
       useSendError(data);
     } else {
