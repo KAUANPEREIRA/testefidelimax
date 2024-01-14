@@ -1,10 +1,13 @@
 type Props = {
   isActive?: boolean;
-  onClick?: () => void;
+  onClick?: (event: any) => void;
 };
 export const Star = ({ isActive, onClick }: Props) => {
   return (
-    <button onClick={onClick}>
+    <button
+      onClick={onClick}
+      className="p-2 md:p-4 lg:p-6 xl:p-8 flex items-center justify-center"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         height="40px"

@@ -4,7 +4,7 @@ import MyLogo from "../../assets/logo.svg";
 
 export const Header = () => {
   return (
-    <div className="h-80 bg-gray-900">
+    <div className="h-80 bg-gray-900 ">
       <header className="w-screen max-w-screen-xl mx-auto flex justify-between">
         <div className="flex mt-5">
           <Image src={MyLogo} alt="Sua Logo" />

@@ -13,7 +13,7 @@ export const InputRadioYesorNo = () => {
           type="radio"
           value="Sim"
           {...register("onlyChoice", {
-            required: "Por favor, escolha uma opção",
+            required: true,
           })}
           className="mr-2"
         />
@@ -30,6 +30,11 @@ export const InputRadioYesorNo = () => {
         />
         Não
       </label>
+      <div>
+        {errors.onlyChoice && (
+          <p className="text-red-500 text-xs mt-4">Este campo é obrigatório</p>
+        )}
+      </div>
     </div>
   );
 };

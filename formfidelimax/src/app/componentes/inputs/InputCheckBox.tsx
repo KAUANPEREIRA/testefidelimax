@@ -6,16 +6,27 @@ type Props = {
 };
 
 export const InputCheckBox = ({ description, name }: Props) => {
-  const { control } = useFormContext();
+  const {
+    control,
+    register,
+    formState: { errors },
+  } = useFormContext();
 
   return (
     <label className="text-xs p-4">
       <Controller
         control={control}
-        name={name}
+        name={"inputCheckbox"}
         render={({ field }) => (
           <>
-            <input type="checkbox" {...field} value={description} />
+            <input
+              type="checkbox"
+              {...field}
+              {...register("inputCheckbox", {
+                required: true,
+              })}
+              value={description}
+            />
             {description}
           </>
         )}

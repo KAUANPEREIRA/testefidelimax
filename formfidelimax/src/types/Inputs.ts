@@ -8,4 +8,5 @@ export type Inputs = {
   verticalMultipleChoice: string;
   questionTextOne: string;
   questionTextTwo: string;
+  inputCheckbox: string;
 };
