@@ -93,7 +93,7 @@ export const Main = () => {
             {query.isLoading && "carregando..."}
             {query?.data?.itens.map((question, index) => {
               return (
-                <div>
+                <div key={index}>
                   {(question?.answerValue === 5 ||
                     question?.answerValue === 9) && <TitleEstatic />}
                   <p className="text-sm font-poppins m-4 font-medium">
@@ -109,6 +109,7 @@ export const Main = () => {
                       {items.map((item, index) => {
                         return (
                           <Star
+                            key={index}
                             {...register("stars")}
                             onClick={(event: any) => {
                               event.preventDefault();
@@ -125,6 +126,7 @@ export const Main = () => {
                       <div className="flex m-4 flex-wrap">
                         {inputRadios.map((radio, index) => (
                           <InputRadiosNumber
+                            key={index}
                             radio={radio}
                             index={index}
                             valueDefault={radioDefaultValue}
@@ -162,6 +164,7 @@ export const Main = () => {
                       <div className="flex flex-row m-4 flex-wrap">
                         {question?.itens?.map((item, index) => (
                           <MultipleHorizontal
+                            key={index}
                             index={index}
                             description={item?.description}
                           />
@@ -177,6 +180,7 @@ export const Main = () => {
                       {question?.itens?.map((item, index) => {
                         return (
                           <InputCheckBox
+                            key={index}
                             description={item.description}
                             name={item?.description}
                           />
