@@ -1,6 +1,7 @@
 "use client";
 
 import { useSendError } from "@/hooks/UseSendErro";
+
 import { useSendFakePost } from "@/hooks/UseSendFakePost";
 import { useSendSucces } from "@/hooks/UseSendSucces";
 import { Inputs } from "@/types/Inputs";
@@ -47,13 +48,17 @@ export const Main = () => {
   const [storeSelect, setStoreSelect] = useState<Itens[]>();
   const [buttonClicked, setButtonClicked] = useState("");
 
+  const { sendFakePost } = useSendFakePost();
+  const { sendError } = useSendError();
+  const { sendSuccess } = useSendSucces();
+
   const handleFormSubmit = async (data: Inputs) => {
     if (buttonClicked === "sendFakePost") {
-      await useSendFakePost(data);
+      await sendFakePost(data);
     } else if (buttonClicked === "sendError") {
-      await useSendError(data);
+      await sendError(data);
     } else {
-      await useSendSucces(data);
+      await sendSuccess(data);
     }
   };
 

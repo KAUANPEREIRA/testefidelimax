@@ -10,16 +10,20 @@ const notifyError = () => {
   toast.error("Desculpe ocorreu um erro inesperado,tente novamente");
 };
 
-export const useSendSucces = (data: Inputs) => {
-  axios
-    .post(
-      `https://fdlmx-backgrounds.sfo3.digitaloceanspaces.com/front-test/survey-post-success.json`,
-      data
-    )
-    .then(() => {
-      notifySucces();
-    })
-    .catch(() => {
-      notifyError();
-    });
+export const useSendSucces = () => {
+  const sendSuccess = async (data: Inputs) => {
+    await axios
+      .post(
+        `https://fdlmx-backgrounds.sfo3.digitaloceanspaces.com/front-test/survey-post-success.json`,
+        data
+      )
+      .then(() => {
+        notifySucces();
+      })
+      .catch(() => {
+        notifyError();
+      });
+  };
+
+  return { sendSuccess };
 };
