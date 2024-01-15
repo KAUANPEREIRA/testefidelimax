@@ -88,7 +88,7 @@ export const Main = () => {
   };
 
   return (
-    <div className="-mt-44">
+    <div className="-mt-44 mb-20">
       <h1 className="text-4xl text-center text-white font-poppins font-semibold mb-5">
         Pesquisa de Satisfação
       </h1>
