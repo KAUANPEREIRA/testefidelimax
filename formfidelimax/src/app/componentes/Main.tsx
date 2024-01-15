@@ -24,9 +24,10 @@ import { MultipleHorizontal } from "./inputs/MultipleHorizontal";
 import { SelectComponent } from "./inputs/SelectComponent";
 import { Star } from "./inputs/stars";
 // import { useSendFakePost } from "../../hooks/UseSendFakePost";
-import { useSendError } from "../../hooks/UseSendErro";
-import { useSendFakePost } from "../../hooks/UseSendFakePost";
-import { useSendSucces } from "../../hooks/UseSendSucces";
+
+import { useSendError } from "../../hooks/useSendError";
+import { useSendFakePost } from "../../hooks/useSendFakePosts";
+import { useSendSucces } from "../../hooks/useSendSuccess";
 export const Main = () => {
   const methods = useForm<Inputs>();
   const {
