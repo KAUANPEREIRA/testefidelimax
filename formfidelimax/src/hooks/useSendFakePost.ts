@@ -11,14 +11,15 @@ const notifyError = () => {
 };
 
 export const useSendFakePost = (formData: Inputs) => {
-  axios
-    .post(`https://jsonplaceholder.typicode.com/posts/`, formData)
-    .then((res) => {
+  const sendFakePost = async () => {
+    try {
+      await axios.post(`https://jsonplaceholder.typicode.com/posts/`, formData);
       setTimeout(() => {
         notifySucces();
       });
-    })
-    .catch((err) => {
+    } catch (error) {
       notifyError();
-    });
+    }
+  };
+  sendFakePost();
 };
