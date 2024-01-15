@@ -47,13 +47,13 @@ export const Main = () => {
   const [storeSelect, setStoreSelect] = useState<Itens[]>();
   const [buttonClicked, setButtonClicked] = useState("");
 
-  const handleFormSubmit = (data: Inputs) => {
+  const handleFormSubmit = async (data: Inputs) => {
     if (buttonClicked === "sendFakePost") {
-      useSendFakePost(data);
+      await useSendFakePost(data);
     } else if (buttonClicked === "sendError") {
-      useSendError(data);
+      await useSendError(data);
     } else {
-      useSendSucces(data);
+      await useSendSucces(data);
     }
   };
 
