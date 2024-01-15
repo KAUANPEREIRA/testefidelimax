@@ -1,8 +1,8 @@
 "use client";
 
-import { useSendError } from "@/hooks/useSendErro";
-import { useSendFakePost } from "@/hooks/useSendFakePost";
-import { useSendSucces } from "@/hooks/useSendSucces";
+import { useSendError } from "@/hooks/UseSendErro";
+import { useSendFakePost } from "@/hooks/UseSendFakePost";
+import { useSendSucces } from "@/hooks/UseSendSucces";
 import { Inputs } from "@/types/Inputs";
 import { Itens } from "@/types/Question";
 import { getQuestions } from "@/utils/api";
