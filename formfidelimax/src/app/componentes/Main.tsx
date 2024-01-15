@@ -1,16 +1,12 @@
 "use client";
 
-import { useSendError } from "@/hooks/UseSendErro";
-
-import { useSendFakePost } from "@/hooks/UseSendFakePost";
-import { useSendSucces } from "@/hooks/UseSendSucces";
-import { Inputs } from "@/types/Inputs";
-import { Itens } from "@/types/Question";
-import { getQuestions } from "@/utils/api";
 import { useQuery } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import "react-toastify/dist/ReactToastify.css";
+import { Inputs } from "../../types/Inputs";
+import { Itens } from "../../types/Question";
+import { getQuestions } from "../../utils/api";
 import { ButtonFakePost } from "./buttons/ButtonFakePost";
 import { ButtonSendError } from "./buttons/ButtonSendError";
 import { ButtonSendSuccess } from "./buttons/ButtonSendSuccess";
@@ -27,7 +23,10 @@ import { InputTextArea } from "./inputs/InputTextArea";
 import { MultipleHorizontal } from "./inputs/MultipleHorizontal";
 import { SelectComponent } from "./inputs/SelectComponent";
 import { Star } from "./inputs/stars";
-
+// import { useSendFakePost } from "../../hooks/UseSendFakePost";
+import { useSendError } from "../../hooks/UseSendErro";
+import { useSendFakePost } from "../../hooks/UseSendFakePost";
+import { useSendSucces } from "../../hooks/UseSendSucces";
 export const Main = () => {
   const methods = useForm<Inputs>();
   const {
