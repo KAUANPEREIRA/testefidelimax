@@ -6,7 +6,7 @@ const notifyError = (err: string) => {
   toast.error(err);
 };
 
-export const useSendError = (data: Inputs) => {
+export const UseSendError = (data: Inputs) => {
   return axios
     .post(
       `https://fdlmx-backgrounds.sfo3.digitaloceanspaces.com/front-test/survey-post-error.json`,

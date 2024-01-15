@@ -10,7 +10,7 @@ const notifyError = () => {
   toast.error("Formulário invalido, tente novamente");
 };
 
-export const useSendFakePost = (formData: Inputs) => {
+export const UseSendFakePost = (formData: Inputs) => {
   axios
     .post(`https://jsonplaceholder.typicode.com/posts/`, formData)
     .then((res) => {
